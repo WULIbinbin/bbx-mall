@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="http://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<body>
+hello world 2333 !!!
+<button onclick="getData()">获取</button>
+<script type="text/javascript">
+     function getData(){
+        $.ajax({
+            type:"POST",
+            url:"/mall/goods-list",
+            data:{},
+            success(res){
+                console.log(res)
+            },
+            fail(err){
+                console.log(err)
+            },
+        })
+     }
+</script>
+</body>
+</html>

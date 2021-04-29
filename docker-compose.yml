@@ -1,0 +1,18 @@
+version: '3'
+services:
+  web:
+    image: bbx-mall
+    ports:
+      - "8888:8888"
+  db:
+    image: mysql:5.7
+    container_name: mysql-bbx
+    ports:
+      - "3306:3306"
+    environment:
+      #数据库密码
+      - MYSQL_ROOT_PASSWORD=root
+      #创建的库
+      - MYSQL_DATABASE=newbee
+      #允许多IP连接数据库
+      - MYSQL_ROOT_HOST=%
